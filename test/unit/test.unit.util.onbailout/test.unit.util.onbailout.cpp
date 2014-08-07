@@ -178,7 +178,7 @@ int main(int argc, char** argv)
 
     XTESTS_COMMANDLINE_PARSEVERBOSITY(argc, argv, &verbosity);
 
-    if(XTESTS_START_RUNNER( *((const char (*)[25])&PANTHEIOS_FE_PROCESS_IDENTITY) , verbosity))
+    if(XTESTS_START_RUNNER((const char *)&PANTHEIOS_FE_PROCESS_IDENTITY[0], verbosity))
     {
         XTESTS_RUN_CASE(test_1_01);
         XTESTS_RUN_CASE(test_1_02);
